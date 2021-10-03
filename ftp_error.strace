@@ -376,4 +376,27 @@
 2999  pselect6(1, [0], NULL, NULL, NULL, {[], 8}) = 1 (in [0])
 2999  read(0, "\177", 1)                = 1
 2999  write(1, "\10\33[K", 4)           = 4
-2999  pselect6(1, [0], NULL, NULL, NULL, {[], 8}
+2999  pselect6(1, [0], NULL, NULL, NULL, {[], 8}) = ? ERESTARTNOHAND (To be restarted if no handler)
+2999  --- SIGHUP {si_signo=SIGHUP, si_code=SI_USER, si_pid=2580, si_uid=1000} ---
+2999  --- SIGTERM {si_signo=SIGTERM, si_code=SI_USER, si_pid=2580, si_uid=1000} ---
+2999  --- SIGCONT {si_signo=SIGCONT, si_code=SI_USER, si_pid=2580, si_uid=1000} ---
+2999  rt_sigreturn({mask=[HUP]})        = 0
+2999  rt_sigreturn({mask=[]})           = -1 EINTR (Interrupted system call)
+2999  ioctl(1, TCXONC, TCOON)           = 0
+2999  ioctl(0, TCGETS, {c_iflags=0x6d02, c_oflags=0x5, c_cflags=0x4bf, c_lflags=0x8a3b, c_line=0, c_cc="\x03\x1c\x7f\x15\x04\x00\x01\x00\x11\x13\x1a\xff\x12\x0f\x17\x16\xff\x00\x00"}) = 0
+2999  ioctl(0, SNDCTL_TMR_STOP or TCSETSW, {c_iflags=0x6d02, c_oflags=0x5, c_cflags=0x4bf, c_lflags=0x8a3b, c_line=0, c_cc="\x03\x1c\x7f\x15\x04\x00\x01\x00\x11\x13\x1a\xff\x12\x0f\x17\x16\xff\x00\x00"}) = 0
+2999  ioctl(0, TCGETS, {c_iflags=0x6d02, c_oflags=0x5, c_cflags=0x4bf, c_lflags=0x8a3b, c_line=0, c_cc="\x03\x1c\x7f\x15\x04\x00\x01\x00\x11\x13\x1a\xff\x12\x0f\x17\x16\xff\x00\x00"}) = 0
+2999  rt_sigaction(SIGINT, {sa_handler=0x55d280f36080, sa_mask=[INT], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, {sa_handler=0x7f70a5c228c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, 8) = 0
+2999  rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, {sa_handler=0x7f70a5c228c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, 8) = 0
+2999  rt_sigaction(SIGHUP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, {sa_handler=0x7f70a5c228c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, 8) = 0
+2999  rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, {sa_handler=0x7f70a5c228c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, 8) = 0
+2999  rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, {sa_handler=0x7f70a5c228c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, 8) = 0
+2999  rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, {sa_handler=0x7f70a5c228c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, 8) = 0
+2999  rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, {sa_handler=0x7f70a5c228c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, 8) = 0
+2999  rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, {sa_handler=0x7f70a5c228c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, 8) = 0
+2999  rt_sigaction(SIGWINCH, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f70a5a49210}, {sa_handler=0x7f70a5c21d40, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f70a5a49210}, 8) = 0
+2999  rt_sigprocmask(SIG_BLOCK, NULL, [], 8) = 0
+2999  getpid()                          = 2999
+2999  kill(2999, SIGHUP)                = 0
+2999  --- SIGHUP {si_signo=SIGHUP, si_code=SI_USER, si_pid=2999, si_uid=1000} ---
+2999  +++ killed by SIGHUP +++
